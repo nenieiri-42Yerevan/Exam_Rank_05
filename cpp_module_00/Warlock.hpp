@@ -6,7 +6,7 @@
 /*   By: vismaily <nenie_iri@mail.ru>               +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/18 13:12:02 by vismaily          #+#    #+#             */
-/*   Updated: 2022/08/18 14:31:16 by vismaily         ###   ########.fr       */
+/*   Updated: 2022/08/18 14:48:17 by vismaily         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,7 +29,7 @@ class	Warlock
 	private:
 		Warlock();
 		Warlock(const Warlock &other);
-		Warlock				operator=(const Warlock &other);
+		Warlock				&operator=(const Warlock &other);
 	private:
 		std::string			name;
 		std::string			title;
