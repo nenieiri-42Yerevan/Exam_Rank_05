@@ -1,24 +1,24 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Fwoosh.cpp                                         :+:      :+:    :+:   */
+/*   Polymorph.cpp                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: vismaily <nenie_iri@mail.ru>               +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/08/18 15:37:39 by vismaily          #+#    #+#             */
-/*   Updated: 2022/08/18 17:59:43 by vismaily         ###   ########.fr       */
+/*   Created: 2022/08/18 17:47:35 by vismaily          #+#    #+#             */
+/*   Updated: 2022/08/18 17:57:29 by vismaily         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "Fwoosh.hpp"
+#include "Polymorph.hpp"
 
-Fwoosh::Fwoosh()
+Polymorph::Polymorph()
 {
-	this->name = "Fwoosh";
-	this->effects = "Fwooshed";
+	this->name = "Polymorph";
+	this->effects = "turned into a critter";
 }
 
-Fwoosh	*Fwoosh::clone() const
+Polymorph	*Polymorph::clone() const
 {
-	return (new Fwoosh(*this));
+	return (new Polymorph(*this));
 }

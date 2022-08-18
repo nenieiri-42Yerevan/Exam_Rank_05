@@ -1,24 +1,22 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Fwoosh.cpp                                         :+:      :+:    :+:   */
+/*   Dummy.cpp                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: vismaily <nenie_iri@mail.ru>               +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/08/18 15:37:39 by vismaily          #+#    #+#             */
-/*   Updated: 2022/08/18 17:59:43 by vismaily         ###   ########.fr       */
+/*   Created: 2022/08/18 15:43:57 by vismaily          #+#    #+#             */
+/*   Updated: 2022/08/18 17:58:25 by vismaily         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "Fwoosh.hpp"
+#include "Dummy.hpp"
 
-Fwoosh::Fwoosh()
+Dummy::Dummy() : ATarget("Target Practice Dummy")
 {
-	this->name = "Fwoosh";
-	this->effects = "Fwooshed";
 }
 
-Fwoosh	*Fwoosh::clone() const
+Dummy	*Dummy::clone() const
 {
-	return (new Fwoosh(*this));
+	return (new Dummy(*this));
 }

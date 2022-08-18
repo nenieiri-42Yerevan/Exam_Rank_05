@@ -1,24 +1,26 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Fwoosh.cpp                                         :+:      :+:    :+:   */
+/*   Fwoosh.hpp                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: vismaily <nenie_iri@mail.ru>               +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/08/18 15:37:39 by vismaily          #+#    #+#             */
-/*   Updated: 2022/08/18 17:59:43 by vismaily         ###   ########.fr       */
+/*   Created: 2022/08/18 15:37:42 by vismaily          #+#    #+#             */
+/*   Updated: 2022/08/18 17:57:29 by vismaily         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "Fwoosh.hpp"
+#ifndef FWOOSH_HPP
+# define FWOOSH_HPP
 
-Fwoosh::Fwoosh()
-{
-	this->name = "Fwoosh";
-	this->effects = "Fwooshed";
-}
+# include "ASpell.hpp"
 
-Fwoosh	*Fwoosh::clone() const
+class	Fwoosh : public ASpell
 {
-	return (new Fwoosh(*this));
-}
+	public:
+		Fwoosh();
+	public:
+		virtual Fwoosh	*clone() const;
+};
+
+#endif

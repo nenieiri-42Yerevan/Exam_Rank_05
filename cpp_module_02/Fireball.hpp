@@ -1,24 +1,26 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Fwoosh.cpp                                         :+:      :+:    :+:   */
+/*   Fireball.hpp                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: vismaily <nenie_iri@mail.ru>               +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/08/18 15:37:39 by vismaily          #+#    #+#             */
-/*   Updated: 2022/08/18 17:59:43 by vismaily         ###   ########.fr       */
+/*   Created: 2022/08/18 17:43:35 by vismaily          #+#    #+#             */
+/*   Updated: 2022/08/18 19:46:01 by vismaily         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "Fwoosh.hpp"
+#ifndef FIREBALL_HPP
+# define FIREBALL_HPP
 
-Fwoosh::Fwoosh()
-{
-	this->name = "Fwoosh";
-	this->effects = "Fwooshed";
-}
+# include "ASpell.hpp"
 
-Fwoosh	*Fwoosh::clone() const
+class	Fireball : public ASpell
 {
-	return (new Fwoosh(*this));
-}
+	public:
+		Fireball();
+	public:
+		virtual Fireball	*clone() const;
+};
+
+#endif

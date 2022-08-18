@@ -1,24 +1,26 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Fwoosh.cpp                                         :+:      :+:    :+:   */
+/*   Polymorph.hpp                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: vismaily <nenie_iri@mail.ru>               +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/08/18 15:37:39 by vismaily          #+#    #+#             */
-/*   Updated: 2022/08/18 17:59:43 by vismaily         ###   ########.fr       */
+/*   Created: 2022/08/18 17:47:39 by vismaily          #+#    #+#             */
+/*   Updated: 2022/08/18 19:46:01 by vismaily         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "Fwoosh.hpp"
+#ifndef POLYMORPH_HPP
+# define POLYMORPH_HPP
 
-Fwoosh::Fwoosh()
-{
-	this->name = "Fwoosh";
-	this->effects = "Fwooshed";
-}
+# include "ASpell.hpp"
 
-Fwoosh	*Fwoosh::clone() const
+class	Polymorph: public ASpell
 {
-	return (new Fwoosh(*this));
-}
+	public:
+		Polymorph();
+	public:
+		virtual Polymorph	*clone() const;
+};
+
+#endif

@@ -1,26 +1,38 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Fwoosh.hpp                                         :+:      :+:    :+:   */
+/*   ATarget.hpp                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: vismaily <nenie_iri@mail.ru>               +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/08/18 15:37:42 by vismaily          #+#    #+#             */
-/*   Updated: 2022/08/18 17:59:31 by vismaily         ###   ########.fr       */
+/*   Created: 2022/08/18 15:08:48 by vismaily          #+#    #+#             */
+/*   Updated: 2022/08/18 16:39:08 by vismaily         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef FWOOSH_HPP
-# define FWOOSH_HPP
+#ifndef ATARGET_HPP
+# define ATARGET_HPP
 
+# include <string>
+# include <iostream>
 # include "ASpell.hpp"
 
-class	Fwoosh : public ASpell
+class	ASpell;
+
+class	ATarget
 {
 	public:
-		Fwoosh();
+		ATarget();
+		ATarget(const ATarget &other);
+		ATarget(const std::string &type);
+		ATarget				&operator=(const ATarget &other);
+		virtual				~ATarget();
 	public:
-		virtual Fwoosh	*clone() const;
+		const std::string	&getType() const;
+		virtual ATarget		*clone() const = 0;
+		void				getHitBySpell(const ASpell &obj) const;
+	private:
+		std::string			type;
 };
 
 #endif

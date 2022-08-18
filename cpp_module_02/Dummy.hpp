@@ -1,24 +1,26 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Fwoosh.cpp                                         :+:      :+:    :+:   */
+/*   Dummy.hpp                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: vismaily <nenie_iri@mail.ru>               +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/08/18 15:37:39 by vismaily          #+#    #+#             */
-/*   Updated: 2022/08/18 17:59:43 by vismaily         ###   ########.fr       */
+/*   Created: 2022/08/18 15:44:06 by vismaily          #+#    #+#             */
+/*   Updated: 2022/08/18 17:57:57 by vismaily         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "Fwoosh.hpp"
+#ifndef DUMMY_HPP
+# define DUMMY_HPP
 
-Fwoosh::Fwoosh()
-{
-	this->name = "Fwoosh";
-	this->effects = "Fwooshed";
-}
+# include "ATarget.hpp"
 
-Fwoosh	*Fwoosh::clone() const
+class	Dummy : public ATarget
 {
-	return (new Fwoosh(*this));
-}
+	public:
+		Dummy();
+	public:
+		virtual Dummy	*clone() const;
+};
+
+#endif

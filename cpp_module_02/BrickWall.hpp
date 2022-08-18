@@ -1,24 +1,26 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Fwoosh.cpp                                         :+:      :+:    :+:   */
+/*   BrickWall.hpp                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: vismaily <nenie_iri@mail.ru>               +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/08/18 15:37:39 by vismaily          #+#    #+#             */
-/*   Updated: 2022/08/18 17:59:43 by vismaily         ###   ########.fr       */
+/*   Created: 2022/08/18 17:54:06 by vismaily          #+#    #+#             */
+/*   Updated: 2022/08/18 19:46:01 by vismaily         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "Fwoosh.hpp"
+#ifndef BRICKWALL_HPP
+# define BRICKWALL_HPP
 
-Fwoosh::Fwoosh()
-{
-	this->name = "Fwoosh";
-	this->effects = "Fwooshed";
-}
+# include "ATarget.hpp"
 
-Fwoosh	*Fwoosh::clone() const
+class	BrickWall: public ATarget
 {
-	return (new Fwoosh(*this));
-}
+	public:
+		BrickWall();
+	public:
+		virtual BrickWall	*clone() const;
+};
+
+#endif

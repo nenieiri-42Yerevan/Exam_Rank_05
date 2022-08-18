@@ -1,26 +1,36 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Dummy.hpp                                          :+:      :+:    :+:   */
+/*   SpellBook.hpp                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: vismaily <nenie_iri@mail.ru>               +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/08/18 15:44:06 by vismaily          #+#    #+#             */
-/*   Updated: 2022/08/18 17:59:13 by vismaily         ###   ########.fr       */
+/*   Created: 2022/08/18 18:55:08 by vismaily          #+#    #+#             */
+/*   Updated: 2022/08/18 19:46:33 by vismaily         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef DUMMY_HPP
-# define DUMMY_HPP
+#ifndef SPELLBOOK_HPP
+# define SPELLBOOK_HPP
 
-# include "ATarget.hpp"
+# include <vector>
+# include <string>
+# include "ASpell.hpp"
 
-class	Dummy : public ATarget
+class	SpellBook
 {
 	public:
-		Dummy();
+		SpellBook();
+		~SpellBook();
 	public:
-		virtual Dummy	*clone() const;
+		void					learnSpell(ASpell *spell);
+		void					forgetSpell(const std::string &name);
+		ASpell					*createSpell(const std::string &name);
+	private:
+		SpellBook(const SpellBook &other);
+		SpellBook				&operator=(const SpellBook &other);
+	private:
+		std::vector<ASpell *>	book;
 };
 
 #endif
