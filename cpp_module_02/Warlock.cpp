@@ -6,17 +6,34 @@
 /*   By: vismaily <nenie_iri@mail.ru>               +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/18 13:12:25 by vismaily          #+#    #+#             */
-/*   Updated: 2022/08/18 19:26:09 by vismaily         ###   ########.fr       */
+/*   Updated: 2022/08/19 14:11:58 by vismaily         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Warlock.hpp"
+
+Warlock::Warlock()
+{
+}
 
 Warlock::Warlock(const std::string name, const std::string title)
 {
 	this->name = name;
 	this->title = title;
 	std::cout << name << ": This looks like another boring day." << std::endl;
+}
+
+Warlock::Warlock(const Warlock &other)
+{
+	(void)other;
+}
+
+Warlock	&Warlock::operator=(const Warlock &other)
+{
+	if (this != &other)
+	{
+	}
+	return (*this);
 }
 
 Warlock::~Warlock()
