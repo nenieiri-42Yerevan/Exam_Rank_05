@@ -6,7 +6,7 @@
 /*   By: vismaily <nenie_iri@mail.ru>               +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/18 13:12:25 by vismaily          #+#    #+#             */
-/*   Updated: 2022/08/19 11:27:23 by vismaily         ###   ########.fr       */
+/*   Updated: 2022/08/19 14:35:49 by vismaily         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,13 +25,16 @@ Warlock::Warlock(const std::string name, const std::string title)
 
 Warlock::Warlock(const Warlock &other)
 {
-	(void)other;
+	this->name = other.name;
+	this->title = other.title;
 }
 
 Warlock	&Warlock::operator=(const Warlock &other)
 {
 	if (this != &other)
 	{
+		this->name = other.name;
+		this->title = other.title;
 	}
 	return (*this);
 }
