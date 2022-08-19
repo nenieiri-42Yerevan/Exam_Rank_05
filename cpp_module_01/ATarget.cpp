@@ -6,7 +6,7 @@
 /*   By: vismaily <nenie_iri@mail.ru>               +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/18 15:08:44 by vismaily          #+#    #+#             */
-/*   Updated: 2022/08/18 16:13:56 by vismaily         ###   ########.fr       */
+/*   Updated: 2022/08/19 12:03:22 by vismaily         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,20 +16,22 @@ ATarget::ATarget()
 {
 }
 
-ATarget::ATarget(const ATarget &other)
-{
-	this->type = other.type;
-}
-
 ATarget::ATarget(const std::string &type)
 {
 	this->type = type;
 }
 
+ATarget::ATarget(const ATarget &other)
+{
+	this->type = other.type;
+}
+
 ATarget	&ATarget::operator=(const ATarget &other)
 {
 	if (this != &other)
+	{
 		this->type = other.type;
+	}
 	return (*this);
 }
 
@@ -42,7 +44,7 @@ const std::string	&ATarget::getType() const
 	return (this->type);
 }
 
-void	ATarget::getHitBySpell(const ASpell &obj) const
+void	ATarget::getHitBySpell(const ASpell &spell) const
 {
-	std::cout << this->type << " has been " << obj.getEffects() << "!" << std::endl;
+	std::cout << this->type << " has been " << spell.getEffects() << "!" << std::endl;
 }
