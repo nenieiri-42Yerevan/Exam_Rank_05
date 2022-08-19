@@ -6,7 +6,7 @@
 /*   By: vismaily <nenie_iri@mail.ru>               +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/18 15:37:39 by vismaily          #+#    #+#             */
-/*   Updated: 2022/08/19 12:15:16 by vismaily         ###   ########.fr       */
+/*   Updated: 2022/08/19 21:35:40 by vismaily         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,7 @@
 Fwoosh::Fwoosh()
 {
 	this->name = "Fwoosh";
-	this->effects = "Fwooshed";
+	this->effects = "fwooshed";
 }
 
 Fwoosh	*Fwoosh::clone() const
