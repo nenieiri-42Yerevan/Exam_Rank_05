@@ -6,7 +6,7 @@
 /*   By: vismaily <nenie_iri@mail.ru>               +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/18 13:12:25 by vismaily          #+#    #+#             */
-/*   Updated: 2022/08/18 14:24:49 by vismaily         ###   ########.fr       */
+/*   Updated: 2022/08/19 11:20:28 by vismaily         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,12 +24,12 @@ Warlock::~Warlock()
 	std::cout << this->name << ": My job here is done!" << std::endl;
 }
 
-const std::string	Warlock::getName(void) const
+const std::string	&Warlock::getName(void) const
 {
 	return (this->name);
 }
 
-const std::string	Warlock::getTitle(void) const
+const std::string	&Warlock::getTitle(void) const
 {
 	return (this->title);
 }
