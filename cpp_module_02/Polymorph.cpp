@@ -6,7 +6,7 @@
 /*   By: vismaily <nenie_iri@mail.ru>               +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/18 17:47:35 by vismaily          #+#    #+#             */
-/*   Updated: 2022/08/18 17:57:29 by vismaily         ###   ########.fr       */
+/*   Updated: 2022/08/19 13:24:36 by vismaily         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,5 +20,5 @@ Polymorph::Polymorph()
 
 Polymorph	*Polymorph::clone() const
 {
-	return (new Polymorph(*this));
+	return (new Polymorph());
 }
