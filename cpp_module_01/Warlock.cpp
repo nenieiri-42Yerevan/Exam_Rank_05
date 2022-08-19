@@ -6,17 +6,34 @@
 /*   By: vismaily <nenie_iri@mail.ru>               +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/18 13:12:25 by vismaily          #+#    #+#             */
-/*   Updated: 2022/08/18 16:44:58 by vismaily         ###   ########.fr       */
+/*   Updated: 2022/08/19 13:08:20 by vismaily         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Warlock.hpp"
+
+Warlock::Warlock()
+{
+}
 
 Warlock::Warlock(const std::string name, const std::string title)
 {
 	this->name = name;
 	this->title = title;
 	std::cout << name << ": This looks like another boring day." << std::endl;
+}
+
+Warlock::Warlock(const Warlock &other)
+{
+	(void)other;
+}
+
+Warlock	&Warlock::operator=(const Warlock &other)
+{
+	if (this != &other)
+	{
+	}
+	return (*this);
 }
 
 Warlock::~Warlock()
@@ -41,8 +58,9 @@ void	Warlock::setTitle(const std::string title)
 
 void	Warlock::introduce() const
 {
-	std::cout << this->name << ": I am " << this->name << ", ";
-	std::cout << this->title << '!' << std::endl;
+	std::cout << this->name << ": I am ";
+	std::cout << this->name << ", ";
+	std::cout << this->title << "!" << std::endl;
 }
 
 void	Warlock::learnSpell(ASpell *spell)
@@ -70,6 +88,11 @@ void	Warlock::forgetSpell(const std::string &name)
 void	Warlock::launchSpell(const std::string &name, const ATarget &target)
 {
 	for (size_t i = 0; i < this->spells.size(); ++i)
+	{
 		if (this->spells[i]->getName() == name)
+		{
 			this->spells[i]->launch(target);
+			return ;
+		}
+	}
 }
