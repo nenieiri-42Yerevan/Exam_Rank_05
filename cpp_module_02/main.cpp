@@ -6,7 +6,7 @@
 /*   By: vismaily <nenie_iri@mail.ru>               +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/18 19:39:48 by vismaily          #+#    #+#             */
-/*   Updated: 2022/08/18 19:45:06 by vismaily         ###   ########.fr       */
+/*   Updated: 2023/01/17 18:31:08 by vismaily         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,4 +37,10 @@ int main()
   richard.introduce();
   richard.launchSpell("Polymorph", *wall);
   richard.launchSpell("Fireball", *wall);
+
+//  delete polymorph;
+//  delete fireball;
+//  delete wall;
+
+//  while (1) ;
 }

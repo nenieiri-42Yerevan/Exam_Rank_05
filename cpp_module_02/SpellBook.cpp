@@ -6,7 +6,7 @@
 /*   By: vismaily <nenie_iri@mail.ru>               +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/18 18:55:04 by vismaily          #+#    #+#             */
-/*   Updated: 2022/08/18 19:51:21 by vismaily         ###   ########.fr       */
+/*   Updated: 2023/01/17 18:23:41 by vismaily         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -59,6 +59,6 @@ ASpell	*SpellBook::createSpell(const std::string &name)
 {
 	for (size_t i = 0; i < this->book.size(); ++i)
 		if (this->book[i]->getName() == name)
-			return (this->book[i]);
+			return (this->book[i]->clone());
 	return (0);
 }

@@ -6,7 +6,7 @@
 /*   By: vismaily <nenie_iri@mail.ru>               +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/18 13:12:25 by vismaily          #+#    #+#             */
-/*   Updated: 2022/08/19 14:36:33 by vismaily         ###   ########.fr       */
+/*   Updated: 2023/01/17 18:22:08 by vismaily         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -80,5 +80,8 @@ void	Warlock::launchSpell(const std::string &name, const ATarget &target)
 	ASpell	*spell;
 	spell = this->book.createSpell(name);
 	if (spell)
+	{
 		spell->launch(target);
+		delete spell;
+	}
 }

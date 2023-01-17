@@ -6,7 +6,7 @@
 /*   By: vismaily <nenie_iri@mail.ru>               +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/18 19:26:57 by vismaily          #+#    #+#             */
-/*   Updated: 2022/08/18 19:49:31 by vismaily         ###   ########.fr       */
+/*   Updated: 2023/01/17 18:23:56 by vismaily         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -59,7 +59,7 @@ ATarget	*TargetGenerator::createTarget(const std::string &type)
 {
 	for (size_t i = 0; i < this->generator.size(); ++i)
 		if (this->generator[i]->getType() == type)
-			return (this->generator[i]);
+			return (this->generator[i]->clone());
 	return (0);
 }
 
